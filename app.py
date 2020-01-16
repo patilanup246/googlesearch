@@ -17,6 +17,7 @@ with open('all.csv', 'r', encoding="utf8") as file:
             browser = webdriver.Chrome(executable_path=executable_path)
             time.sleep(10)
             browser.get("https://www.google.com/search?q=" + search_query)
+            print(search_query)
             alllinks = browser.find_elements_by_xpath('//div[starts-with(@class, "srg")]/div')
             email = ''
             for e in alllinks:
